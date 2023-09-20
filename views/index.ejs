@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spam bot By Nerek</title>
+  <style>
+*{box-sizing:border-box;}
+
+
+form{
+  
+	width:auto;
+  padding: 8px;
+  margin: auto;
+	border-radius: 10px;
+
+
+	background-color:#ccc;
+}
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="submit"]{
+  
+	width:100%;
+	padding:8px 16px;
+	margin-top:10px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+  
+  
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+input {
+  
+  border: 1px solid #ccc; /* Borde del select */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+select {
+
+  border: 1px solid #ccc; /* Borde del select */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #fff; /* Color de fondo */
+  
+}
+
+option {
+  
+  background-color: #ccc; /* Color de fondo de los elementos option */
+  color: #333; /* Color del texto de los elementos option */
+}
+
+/* Estilo adicional para cuando se selecciona una opción */
+option:checked {
+  
+  background-color: #000; /* Cambiar el color de fondo cuando se selecciona */
+  color: #fff; /* Cambiar el color del texto cuando se selecciona */
+}
+
+body {
+  display: flex;
+    }
+  </style>
+</head>
+<body>
+  <!--<h1>Spam bot</h1> -->
+  <form action="/" method="post">
+    <label for="host">Host:</label>
+    <input type="text" id="host" name="host" value="<%= botConfig.host %>"><br>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value="<%= botConfig.username %>"><br>
+
+    <label for="port">Port:</label>
+    <input type="text" id="port" name="port" value="<%= botConfig.port %>"><br>
+
+    <label for="version">Version:</label>
+    <select id="version" name="version">
+      <option value ="1.7.2" <%= botConfig.version === "1.7.2" ? "selected" : "" %>>1.7.2</option>
+      <option value ="1.8.9" <%= botConfig.version === "1.8.9" ? "selected" : "" %>>1.8.9</option>
+      <option value ="AAA" <%= botConfig.version === "AAA" ? "selected" : "" %>>AAA</option>
+    </select>
+    <!--<input type="text" id="version" name="version" value="<%= botConfig.version %>"><br>-->
+    <input type="submit" value="Start">
+  </form>
+ 
+  <form action="/forward" method="post">
+    <label for="forward">Forward:</label>
+    <select id="forward" name="forward">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select><br>
+  
+    <input type="submit" value="Start">
+  </form>
+ 
+  <form action="/Backwards" method="post">
+    <label for="Backwards">Backward:</label>
+    <select id="Backwards" name="Backwards">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select><br>
+  
+    <input type="submit" value="Start">
+  </form>
+
+  <form action="/Left" method="post">
+    <label for="Left">Left:</label>
+    <select id="Left" name="Left">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select><br>
+  
+    <input type="submit" value="Start">
+  </form>
+
+
+  <form action="/Right" method="post">
+    <label for="Right">Right:</label>
+    <select id="Right" name="Right">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select><br>
+  
+    <input type="submit" value="Start">
+  </form>
+ 
+  <form action="/Jump" method="post">
+    <label for="Jump">Jump:</label>
+    <select id="Jump" name="Jump">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select><br>
+  
+    <input type="submit" value="Start">
+  </form>
+
+</form>
+
+<form action="/Sneak" method="post">
+  <label for="Sneak">Sneak:</label>
+  <select id="Sneak" name="Sneak">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select><br>
+
+  <input type="submit" value="Start">
+</form>
+
+
+
+</body>
+
+
+</html>
